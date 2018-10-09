@@ -17,7 +17,7 @@ require 'foodsJson.php';
 <p>This food Calorie Calculator below allows you to choose from dozens of foods, and see nutrition facts such as calories, fat, protein, etc.</p>
 <form method='GET' action='calc.php'>
 
-    <label>Qty:<input type="number" name="quantity" placeholder="How much do you eat?"></label>
+    <label>Qty:<input type="number" name="quantity" placeholder=<?= (isset($foodName)) ? $quantity : "'How much do you eat?'" ?>></label>
     <label><input type='radio' name="unit" id="lb" value="lb" checked> lb</label>
     <label><input type="radio" name="unit" id='kg' value="kg"> kg</label><br><br>
     <label>Food name:
